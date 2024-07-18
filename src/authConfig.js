@@ -28,7 +28,7 @@ export const b2cPolicies = {
             authority: 'https://shawnpeeryb2c.b2clogin.com/shawnpeeryb2c.onmicrosoft.com/B2C_1_edit_profile1',
         },
     },
-    authorityDomain: 'fabrikamb2c.b2clogin.com',
+    authorityDomain: 'shawnpeeryb2c.b2clogin.com',
 };
 
 
@@ -39,7 +39,7 @@ export const b2cPolicies = {
  */
 export const msalConfig = {
     auth: {
-        clientId: '09dd92cf-78ba-4c25-94b2-ec3f3ef84352', // This is the ONLY mandatory field that you need to supply.
+        clientId: '336e86e4-7b42-462f-b068-af0edd0ba226', // This is the ONLY mandatory field that you need to supply.
         authority: b2cPolicies.authorities.signUpSignIn.authority, // Choose SUSI as your default authority.
         knownAuthorities: [b2cPolicies.authorityDomain], // Mark your B2C tenant's domain as trusted.
         redirectUri: '/', // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
@@ -85,8 +85,8 @@ export const protectedResources = {
     apiTodoList: {
         endpoint: 'http://localhost:5000/api/todolist',
         scopes: {
-            read: ['https://fabrikamb2c.onmicrosoft.com/TodoList/ToDoList.Read'],
-            write: ['https://fabrikamb2c.onmicrosoft.com/TodoList/ToDoList.ReadWrite'],
+            read: ['https://shawnpeeryb2c.onmicrosoft.com/microservices-api/Todos.Read'],
+            write: ['https://shawnpeeryb2c.onmicrosoft.com/microservices-api/Todos.Write'],
         },
     },
 };
